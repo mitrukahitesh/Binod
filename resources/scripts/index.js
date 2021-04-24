@@ -4,10 +4,10 @@ const banner = slider[0].getElementsByClassName("banner")
 const nextBannerButton = document.getElementById("nextBanner")
 var setBanner = 0;
 var bannerInterval
-// const sendEmail = document.getElementById("sendEmail")
-// const customerName = document.getElementById("name")
-// const email = document.getElementById("email")
-// const query = document.getElementById("query")
+const sendEmail = document.getElementById("sendEmail")
+const customerName = document.getElementById("name")
+const email = document.getElementById("email")
+const query = document.getElementById("query")
 const grids = document.getElementsByClassName("grid")
 
 function getBanners() {
@@ -82,12 +82,12 @@ contactUs.onclick = function () {
     scrollingElement.scrollTop = scrollingElement.scrollHeight - scrollingElement.clientHeight
 }
 
-// sendEmail.onclick = function () {
-//     var receiverName = customerName.value
-//     var receiver = email.value
-//     var message = query.value
-//     var URL = `https://queu-e.herokuapp.com/?resource=verify&function=sendOtp&email=${receiver}`
-//     var xhr = new XMLHttpRequest()
-//     xhr.open("GET", URL)
-//     xhr.send()
-// }
+sendEmail.onclick = function () {
+    var receiverName = customerName.value
+    var receiver = email.value
+    var message = query.value
+    var URL = `https://ecell-binod.herokuapp.com/?resource=sendmail&email=${receiver}&name=${customerName}`
+    var xhr = new XMLHttpRequest()
+    xhr.open("GET", URL)
+    xhr.send()
+}
