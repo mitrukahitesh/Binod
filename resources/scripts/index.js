@@ -19,6 +19,9 @@ function getBanners() {
             banner[i].src = xhr.response.banners[i].link
         }
     }
+    xhr.onerror = function () {
+        alert("Some error occured!!")
+    }
     xhr.send()
 }
 
@@ -34,6 +37,9 @@ function getMenCategory() {
             grids[i].getElementsByClassName("offer")[0].textContent = item.offer
         }
     }
+    xhr.onerror = function () {
+        alert("Some error occured!!")
+    }
     xhr.send()
 }
 
@@ -48,6 +54,9 @@ function getWomenCategory() {
             grids[i].getElementsByClassName("item")[0].textContent = item.name
             grids[i].getElementsByClassName("offer")[0].textContent = item.offer
         }
+    }
+    xhr.onerror = function () {
+        alert("Some error occured!!")
     }
     xhr.send()
 }
@@ -84,10 +93,19 @@ contactUs.onclick = function () {
 
 sendEmail.onclick = function () {
     var receiverName = customerName.value
+    console.log(receiverName)
     var receiver = email.value
     var message = query.value
-    var URL = `https://ecell-binod.herokuapp.com/?resource=sendmail&email=${receiver}&name=${customerName}`
+    var URL = `https://ecell-binod.herokuapp.com/?resource=sendmail&email=${receiver}&name=${receiverName}`
     var xhr = new XMLHttpRequest()
     xhr.open("GET", URL)
+    xhr.onload = function () {
+        customerName.value = ""
+        query.value = ""
+        email.value = ""
+    }
+    xhr.onerror = function () {
+        alert("Some error occured!!")
+    }
     xhr.send()
 }
