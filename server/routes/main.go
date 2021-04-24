@@ -8,6 +8,7 @@ import (
 
 func Handler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Add("content-type", "application/json")
+	w.Header().Add("Access-Control-Allow-Origin", "*")
 	query := r.URL.Query()
 	resource := query.Get("resource")
 	cat := query.Get("category")
