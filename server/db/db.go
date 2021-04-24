@@ -25,7 +25,7 @@ func GetMongoClient() (*mongo.Client, error) {
 	connString := os.Getenv("MONGO_URI")
 
 	if connString == "" {
-		connString = "mongodb+srv://hitesh:hitesh121@cluster0.pstxd.mongodb.net/ecell?retryWrites=true&w=majority"
+		connString = ""
 	}
 	mongoOnce.Do(func() {
 		clientOptions := options.Client().ApplyURI(connString)
