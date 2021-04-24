@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@300;400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/indes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>E-Cell</title>
 </head>
 
@@ -17,6 +18,10 @@
     <div class="header">
         <h1>BI<span>NOD</span></h1>
         <ul>
+            <li id="searchBar">
+                <input type="text" placeholder="Search.." id="searchText">
+                <a href="#" id="searchButton"><i class="fa fa-search" style="font-size:24px"></i></a>
+            </li>
             <li><a href="#">Home</a></li>
             <li><a href="#">Categories</a></li>
             <li><a href="#">Offers</a></li>
@@ -151,12 +156,12 @@
             </div>
             <div class="section section4">
                 <p style="font-size: 1.2vw;"><b>Contact Us</b></p>
-                <input type="text" placeholder="Your Name" style="padding: 0.5vw; font-family: 'Open Sans';">
-                <input type="email" placeholder="Your Email"
+                <input type="text" id="name" placeholder="Your Name" style="padding: 0.5vw; font-family: 'Open Sans';">
+                <input type="email" id="email" placeholder="Your Email"
                     style="display: block; margin-top: 1vw; padding: 0.5vw; font-family: 'Open Sans';">
-                <textarea placeholder="Query"
+                <textarea placeholder="Query" id="query"
                     style="display: block; resize: none; margin-top: 1vw; padding: 0.5vw; width: 100%; border-radius: 4px; border: none; padding-left: 0.8vw; font-size: 0.9vw; font-family: 'Open Sans';"></textarea>
-                <a href="#"><button
+                <a href="javascript:void();"><button id="sendEmail"
                         style="margin-top: 1vw; width: 4vw; background-color: #F0c330; border: none; padding: 0.4vw; border-radius: 4px; padding-left: 8px; padding-right: 8px; color: #282828;">
                         Send
                     </button>

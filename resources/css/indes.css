@@ -32,7 +32,39 @@ ul{
 
 li{
     display: inline-block;
-    padding: 15px 30px;
+    padding: 15px 25px;
+}
+
+#searchBar {
+    padding-top: 0;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #ffffff;
+    border-radius: 0.4vw;
+    border: none;
+    margin-right: 3vw;
+}
+
+#searchText {
+    border: none;
+    width: 20vw;
+    text-align: start;
+    font-family: "Open Sans";
+}
+
+#searchText:focus {
+    outline: none;
+}
+
+#searchButton {
+    background-color: #ffffff;
+    color: #282828;
+}
+
+#searchBar:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
 }
 
 a{
